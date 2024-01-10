@@ -1,0 +1,9 @@
+
+
+      .nav-background {
+        background-image: url("./images/yorshi-logo.png");
+        background-size: cover;
+
+        /* Workaround for some mobile browsers */
+        min-height: 100%;
+      }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marginades</title>
+    <style>
+    
+      body {
+        background-image: url(<%= asset_path 'rainbow-bg.jpg' %>);
+        background-color: #cccccc;
+        background-size: cover;
+      }
+
+       .product-card {
+      border: 1px solid white;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+      
+      
+    </style>
+</head>
+
+<h1></h1>
+<div class="row">
+
+<%productos = Product.all%>
+<% productos.each do |product|  %>
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="product-card">
+          <h3 class="mt-3"><%=product.nombre%></h3>
+          <%= image_tag product.src.url if product.src? %>
+          
+          <p class="text-muted"><%=product.descripcion%></p>
+          <h4 class="text-success">$<%=product.precio%></h4>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+
+
+
+<body>
+
+
+</body>
+</html>

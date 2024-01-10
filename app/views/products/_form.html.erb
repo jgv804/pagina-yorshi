@@ -1,0 +1,25 @@
+<%= form_with(model: product) do |form| %>
+  <% if product.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+        <% product.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+
+
+    </div>
+  <% end %>
+  <%= form_for @product, html: { multipart: true } do |f| %>
+  <!-- Other form fields -->
+  <%= f.label :src %>
+  <%= f.file_field :src %>
+  <!-- Submit button and end form -->
+<% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
