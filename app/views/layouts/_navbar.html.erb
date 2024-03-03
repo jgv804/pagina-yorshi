@@ -13,7 +13,7 @@
     />
     <style>
       .nav-background {
-        background-image: url(<%= asset_path 'yorshi-logo2.png' %>);
+        background-image: url(<%= asset_path 'patronato.jpg' %>);
         background-size: cover;
 
         /* Workaround for some mobile browsers */
@@ -36,16 +36,26 @@
       
       font-size: 14px;
       text-decoration: none !important;
+      margin-top:50px;
       }
       .navbar button:hover{
       background-color:#630436 !important;
       text-decoration: none !important
       }
       .navbar-nav > li{
-      margin-left:200px;
-      margin-right:200px;
+      margin-left:50px;
+      margin-right:50px;
       
       
+      
+      }
+      .navicon {
+        width: 200px; 
+        height: 200px; 
+        background-image: url(<%= asset_path 'marginades_2.png' %>);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
       }
     </style>
   </head>
@@ -58,13 +68,18 @@
           <ul class="navbar-nav justify-content-center mx-auto my-0 ">
             <li class="nav-item">
               <button>
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="home#">Home</a>
               </button>
             </li>
+            <li class="nav-item">
+            <div class="navicon"></div> 
+          </li>
+
+
             
             <li class="nav-item">
               <button>
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="about#">About Us</a>
               </button>
             </li>
           </ul>
